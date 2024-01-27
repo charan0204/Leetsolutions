@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+     public static void simpleArraySum(int arr[]) {
+        float count=0.0f,count1=0.0f,count2=0.0f;
+        float arr1[]=new float[arr.length];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<0)count++;
+            else if(arr[i]>0)count1++;
+            else count2++;
+           
+        }
+        //  System.out.println(count+" "+count2+" "+count1);
+           System.out.printf("%.6f\n",(count1/arr.length));
+            System.out.printf("%.6f\n",(count/arr.length));
+             System.out.printf("%.6f\n",(count2/arr.length));
+        
+
+    }
+    public static void main(String[] args) throws IOException {
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        simpleArraySum(arr);
+    //    int sum= 
+    //    System.out.println(sum);
+    }
+}
