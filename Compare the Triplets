@@ -1,0 +1,34 @@
+import java.util.*;
+class Solution{
+    public static void  rate(int arr[],int brr[]){
+        int ar[]=new int[2];
+        int Alice=0,Bob=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>brr[i]){
+                Alice++;
+            }
+            else if(arr[i]<brr[i]){
+                Bob++;
+            }
+        }
+        ar[0]=Alice;
+        ar[1]=Bob;
+       for(int i=0;i<ar.length;i++){
+           System.out.print(ar[i]+" ");
+       }
+       System.out.println();
+    }
+    public static void main(String args[]){
+        int arr[]=new int[3];
+        int brr[]=new int[3];
+        Scanner sc=new Scanner(System.in);
+        int n=3;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+        brr[i]=sc.nextInt();
+        }
+        rate(arr,brr);
+    }
+}
