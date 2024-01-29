@@ -1,0 +1,37 @@
+
+import java.util.*;
+class Solution{
+   
+public static void con(int arr[]){
+    int sub=0;
+    for(int i=0;i<arr.length;i++){
+        sub=mult(arr[i])-arr[i];
+        // System.out.println(sub);
+        if(arr[i]>=38){
+        if(sub<3){
+            System.out.println(mult(arr[i]));
+        }
+        else
+        System.out.println(arr[i]);
+        }
+        else
+        System.out.println(arr[i]);
+    }
+}
+public static int mult(int n){
+    int s=n/5;
+    s=s+1;
+    // System.out.println(s+"this");
+    
+    return s*5;
+}
+   public static void main(String args[]){
+       Scanner sc=new Scanner(System.in);
+       int n=sc.nextInt();
+       int arr[]=new int[n];
+       for(int i=0;i<n;i++){
+           arr[i]=sc.nextInt();
+       }
+       con(arr);
+   }
+}
