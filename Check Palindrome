@@ -1,0 +1,8 @@
+public class Solution {
+    public static Boolean isPalindrome(String s) {
+        StringBuffer sb=new StringBuffer(s);
+        if(s.equals(sb.reverse().toString()))return true;
+        return false;
+    }
+
+}
