@@ -1,0 +1,28 @@
+import java.util.* ;
+import java.io.*; 
+public class Solution 
+{
+	public static int countSubstrings(String s) 
+	{
+		int count=0;
+		// String str="";
+		for(int i=0;i<s.length();i++){
+			for(int j=i+1;j<=s.length();j++){
+			
+			if(isvowel(s.substring(i,j))){
+				count++;
+			}
+			}
+		}
+		return count;
+	}
+	public static boolean isvowel(String ch){
+		// ch=ch.toLowerCase();
+		for(int i=0;i<ch.length();i++){
+		if(!(ch.charAt(i)=='a'||ch.charAt(i)=='e'||ch.charAt(i)=='i'||ch.charAt(i)=='o'||ch.charAt(i)=='u'))
+		return false;
+		}
+		
+		return true;
+	}
+}
